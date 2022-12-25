@@ -1,5 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-// import {initModals} from './modules/modals/init-modals';
+import {onPlayClick} from './modules/video';
+import {onTabButtonClick} from './modules/tabs';
+import {initCoachesSlider} from './modules/coaches-slider';
+import {initReviewsSlider} from './modules/reviews-slider';
+// import './modules/reviews-slider';
+
 
 // ---------------------------------
 
@@ -13,10 +18,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+  onPlayClick();
+  onTabButtonClick();
+  initCoachesSlider();
+  initReviewsSlider();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    // initModals();
   });
 });
 
