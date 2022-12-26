@@ -4,27 +4,6 @@
   background-color: $color-ghost-white;
   position: relative;
 
-  &::after {
-    position: absolute;
-    content: "";
-    background-image: url("../img/weights-desktop.png");
-    background-repeat: no-repeat;
-    width: 287px;
-    height: 415px;
-    bottom: -50px;
-    right: 0;
-
-    @include vp-1199 {
-      background-image: url("../img/weights-tablet.png");
-      bottom: -95px;
-      width: 347px;
-    }
-
-    @include vp-767 {
-      display: none;
-    }
-  }
-
   @include vp-1199 {
     padding-top: 101px;
     padding-bottom: 70px;
@@ -35,6 +14,36 @@
     padding-bottom: 45px;
   }
 }
+
+.subscriptions::after {
+  position: absolute;
+  content: "";
+  background-image: url("../img/weights-desktop.png");
+  background-repeat: no-repeat;
+  width: 287px;
+  height: 415px;
+  bottom: -50px;
+  right: 0;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/weights-desktop@2x.png");
+  }
+
+  @include vp-1199 {
+    background-image: url("../img/weights-tablet.png");
+    bottom: -95px;
+    width: 347px;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/weights-tablet@2x.png");
+    }
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
 
 .subscriptions__container {
   display: flex;
@@ -105,6 +114,8 @@
   padding: 10px 0;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
+  user-select: none;
 
   @include vp-1199 {
     font-size: 18px;
@@ -113,6 +124,10 @@
   @include vp-767 {
     font-size: 16px;
     padding: 9px 0 11px;
+  }
+
+  &:hover {
+    border-bottom: 2px solid #d10a42;
   }
 }
 
@@ -148,6 +163,7 @@
   flex-direction: column;
   align-items: center;
   width: 360px;
+  box-sizing: border-box;
 
   @include vp-1199 {
     width: 100%;
@@ -159,6 +175,29 @@
     min-width: 290px;
     padding: 50px 42px;
   }
+}
+
+.subscriptions__item:hover {
+  border-image: linear-gradient(#d10a42 0%, #00359f 100%);
+  border-width: 7px;
+  border-style: solid;
+  border-image-slice: 1;
+  padding: 53px 70px;
+
+  @include vp-1199 {
+    padding: 55px 111px 61px;
+  }
+
+  @include vp-767 {
+    padding: 43px 35px;
+  }
+}
+
+.subscriptions__item:hover a {
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: $color-default-white;
+  border: 0;
+  padding: 26px;
 }
 
 .subscriptions__item h3 {
@@ -259,6 +298,11 @@
   box-sizing: border-box;
   width: 100%;
   text-align: center;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .subscriptions__tabs .current-tab {

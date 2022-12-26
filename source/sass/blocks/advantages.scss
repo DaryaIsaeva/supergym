@@ -13,18 +13,6 @@
 }
 
 .advantages__container {
-  display: grid;
-  grid-template-columns: auto 240px auto;
-  grid-template-rows: auto auto auto;
-  padding-left: 163px;
-  padding-right: 163px;
-
-  @include vp-1199 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   @include vp-767 {
     padding: 0;
   }
@@ -39,7 +27,7 @@
   color: $color-sapphire;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 55px;
+  margin-bottom: 47px;
   margin-left: 10px;
   grid-column: 1/-1;
   grid-row: 1/2;
@@ -48,14 +36,14 @@
     font-size: 42px;
     line-height: 50px;
     margin-left: -25px;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
     margin-left: -17px;
-    margin-bottom: 36px;
+    margin-bottom: 28px;
     padding: 0 35px;
   }
 }
@@ -63,89 +51,31 @@
 .advantages__list {
   padding: 0;
   margin: 0;
-  margin-top: -8px;
   list-style-type: none;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 240px 1fr;
+  column-gap: 60px;
+  grid-template-rows: auto auto;
+  row-gap: 153px;
 
   @include vp-1199 {
-    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
     column-gap: 30px;
-  }
-
-  &:not(:last-of-type) {
-    @include vp-1199 {
-      margin-bottom: 44px;
-    }
+    row-gap: 44px;
   }
 
   @include vp-767 {
     display: flex;
     flex-direction: column;
-    gap: 21px;
-  }
-}
-
-.advantages__list--first-row {
-  grid-column: 1/-1;
-  grid-row: 2/3;
-}
-
-.advantages__list--second-row {
-  grid-column: 1/-1;
-  grid-row: 3/4;
-}
-
-.advantages__list--first-row .advantages__item {
-  padding-bottom: 83px;
-
-  &:first-of-type {
-    padding-left: 20px;
-  }
-
-  @include vp-1199 {
-    padding-bottom: 0;
-
-    &:first-of-type {
-      padding-left: 0;
-    }
-  }
-
-  @include vp-767 {
-    &:first-of-type {
-      padding-left: 35px;
-    }
-  }
-}
-
-.advantages__list--second-row .advantages__item {
-  padding-top: 74px;
-  border-top: 2px solid rgba(209, 10, 66, 0.2);
-
-  &:first-of-type {
-    padding-left: 20px;
-  }
-
-  @include vp-1199 {
-    border: 0;
-    padding-top: 0;
-
-    &:first-of-type {
-      padding-left: 0;
-    }
-  }
-
-  @include vp-767 {
-    &:first-of-type {
-      padding-left: 35px;
-    }
+    align-items: center;
+    gap: 21px
   }
 }
 
 .advantages__central-block {
   grid-column: 2/3;
-  grid-row: 2/4;
+  grid-row: 1/-1;
   background-color: $color-resolution-blue;
   color: $color-default-white;
   display: flex;
@@ -153,18 +83,21 @@
   align-items: center;
   font-family: $ff-roboto-condensed;
   padding: 45px 34px 57px;
-  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 5px;
 
   @include vp-1199 {
-    width: 442px;
+    margin: 0 118px;
     padding: 25px 135px 37px;
-    margin-bottom: 51px;
+    grid-column: 1/-1;
+    grid-row: 2/3;
   }
 
   @include vp-767 {
     width: 100%;
     padding: 29px 74px 43px;
-    margin-bottom: 35px;
+    margin-top: 23px;
+    margin-bottom: 5px;
   }
 }
 
@@ -209,7 +142,6 @@
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 30px;
-  width: 340px;
 
   @include vp-1199 {
     width: auto;
@@ -220,6 +152,47 @@
     flex-direction: column;
     align-items: center;
     padding: 0 35px;
+  }
+}
+
+.advantages__item--square {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding-left: 80px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
+}
+
+.advantages__item--parking {
+  grid-column: 3/4;
+  grid-row: 1/2;
+
+  @include vp-1199 {
+    grid-column: 2/3;
+  }
+}
+
+.advantages__item--comfort {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding-left: 80px;
+
+  @include vp-1199 {
+    grid-row: 3/4;
+    padding: 0;
+  }
+}
+
+.advantages__item--coaching-experience {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  column-gap: 32px;
+
+  @include vp-1199 {
+    grid-column: 2/3;
+    grid-row: 3/4;
   }
 }
 

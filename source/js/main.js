@@ -3,7 +3,6 @@ import {onPlayClick} from './modules/video';
 import {onTabButtonClick} from './modules/tabs';
 import {initCoachesSlider} from './modules/coaches-slider';
 import {initReviewsSlider} from './modules/reviews-slider';
-// import './modules/reviews-slider';
 
 
 // ---------------------------------
