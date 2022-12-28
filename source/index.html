@@ -72,7 +72,7 @@
             <div class="gym__video video">
               <div class="video__preview">
                 <picture>
-                  <source src="img/content/video.webp 1x, img/content/video@2x.webp 2x" type="image/webp">
+                  <source srcset="img/content/video.webp 1x, img/content/video@2x.webp 2x" type="image/webp">
                   <img src="img/content/video.jpg" srcset="img/content/video@2x.jpg 2x" alt="Превью видео с тренажёрным залом." width="364" height="228">
                 </picture>
               </div>
@@ -236,7 +236,7 @@
                 <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__photo">
                     <picture>
-                      <source src="img/content/alexey-lavrov.webp 1x, img/content/alexey-lavrov@2x.webp 2x" type="image/webp">
+                      <source srcset="img/content/alexey-lavrov.webp 1x, img/content/alexey-lavrov@2x.webp 2x" type="image/webp">
                       <img src="img/content/alexey-lavrov.jpg" srcset="img/content/alexey-lavrov@2x.jpg 2x" width="260" height="294" alt="Фото тренера Алексея Лаврова">
                     </picture>
                     <h3>Алексей Лавров</h3>
@@ -308,7 +308,7 @@
                 <li class="coaches__item swiper-slide" tabindex="0">
                   <div class="coaches__photo">
                     <picture>
-                      <source src="img/content/alexey-lavrov.webp 1x, img/content/alexey-lavrov@2x.webp 2x" type="image/webp">
+                      <source srcset="img/content/alexey-lavrov.webp 1x, img/content/alexey-lavrov@2x.webp 2x" type="image/webp">
                       <img src="img/content/alexey-lavrov.jpg" srcset="img/content/alexey-lavrov@2x.jpg 2x" width="260" height="294" alt="Фото тренера Алексея Лаврова">
                     </picture>
                     <h3>Алексей Лавров</h3>
@@ -369,41 +369,45 @@
         <section class="advantages">
           <div class="advantages__container container">
             <h2>Наши преимущества</h2>
-            <ul class="advantages__list">
-              <li class="advantages__item advantages__item--square">
-                <span class="advantages__number"><b>900</b><span>кв/м</span></span>
-                <div>
-                  <h3>Площадь</h3>
-                  <p>Занимайтесь без очередей и&nbsp;толпучки</p>
-                </div>
-              </li>
-              <li class="advantages__item advantages__item--parking">
-                <span class="advantages__number"><b>70</b><span>машин</span></span>
-                <div>
-                  <h3>Собственная парковка</h3>
-                  <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
-                </div>
-              </li>
-              <li class="advantages__central-block">
+            <div class="advantages__wrapper">
+              <ul class="advantages__list advantages__list--top">
+                <li class="advantages__item">
+                  <span class="advantages__number"><b>900</b><span>кв/м</span></span>
+                  <div>
+                    <h3>Площадь</h3>
+                    <p>Занимайтесь без очередей и&nbsp;толпучки</p>
+                  </div>
+                </li>
+                <li class="advantages__item">
+                  <span class="advantages__number"><b>70</b><span>машин</span></span>
+                  <div>
+                    <h3>Собственная парковка</h3>
+                    <p>Вы&nbsp;всегда найдете место для<br>своей машины на&nbsp;нашей парковке</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="advantages__central-block">
                 <span>100</span>
                 <h3>Тренажеров</h3>
                 <p>Современные тренажеры на&nbsp;все группы мышц</p>
-              </li>
-              <li class="advantages__item advantages__item--comfort">
-                <span class="advantages__number"><b>350</b><span>мест</span></span>
-                <div>
-                  <h3>Комфорт</h3>
-                  <p>Просторные раздевалки, душевые,&nbsp;фен, Wi-Fi, кулеры</p>
-                </div>
-              </li>
-              <li class="advantages__item advantages__item--coaching-experience">
-                <span class="advantages__number"><b>5+</b><span>лет</span></span>
-                <div>
-                  <h3>Тренерский опыт</h3>
-                  <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
-                </div>
-              </li>
-            </ul>
+              </div>
+              <ul class="advantages__list advantages__list--bottom">
+                <li class="advantages__item">
+                  <span class="advantages__number"><b>350</b><span>мест</span></span>
+                  <div>
+                    <h3>Комфорт</h3>
+                    <p>Просторные раздевалки, душевые,&nbsp;фен, Wi-Fi, кулеры</p>
+                  </div>
+                </li>
+                <li class="advantages__item">
+                  <span class="advantages__number"><b>5+</b><span>лет</span></span>
+                  <div>
+                    <h3>Тренерский опыт</h3>
+                    <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -446,14 +450,20 @@
               <ul class="reviews__list swiper-wrapper">
                 <li class="reviews__item swiper-slide">
                   <div class="reviews__photo">
-                    <img src="img/review-picture.png" srcset="img/review-picture@2x.png 2x" width="80" height="80" alt="Фото пользователя Анны Орловой">
+                    <picture>
+                      <source srcset="img/content/review-picture.webp 1x, img/content/review-picture@2x.webp 2x" type="image/webp">
+                      <img src="img/content/review-picture.png" srcset="img/content/review-picture@2x.png 2x" width="80" height="80" alt="Фото пользователя Анны Орловой">
+                    </picture>
                   </div>
                   <h3>Анна Орлова</h3>
                   <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</p>
                 </li>
                 <li class="reviews__item swiper-slide">
                   <div class="reviews__photo">
-                    <img src="img/review-picture.png" srcset="img/review-picture@2x.png 2x" width="80" height="80" alt="Фото пользователя Анны Орловой">
+                    <picture>
+                      <source srcset="img/content/review-picture.webp 1x, img/content/review-picture@2x.webp 2x" type="image/webp">
+                      <img src="img/content/review-picture.png" srcset="img/content/review-picture@2x.png 2x" width="80" height="80" alt="Фото пользователя Анны Орловой">
+                    </picture>
                   </div>
                   <h3>Мария Иванова</h3>
                   <p>«Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</p>

@@ -1820,7 +1820,7 @@ button,
 
 .subscriptions {
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 92px;
   background-color: #f8f9fc;
   position: relative;
 }
@@ -1832,7 +1832,7 @@ button,
   background-repeat: no-repeat;
   width: 287px;
   height: 415px;
-  bottom: -50px;
+  bottom: -70px;
   right: 0;
 }
 
@@ -1927,7 +1927,7 @@ button,
 
 .subscriptions__item {
   background-color: #ffffff;
-  padding: 60px 77px;
+  padding: 56px 70px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1941,24 +1941,14 @@ button,
   width: 360px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  border: 7px solid transparent;
 }
 
 .subscriptions__item:hover {
   -o-border-image: -o-linear-gradient(#d10a42 0%, #00359f 100%);
   border-image: -webkit-gradient(linear, left top, left bottom, from(#d10a42), to(#00359f));
   border-image: linear-gradient(#d10a42 0%, #00359f 100%);
-  border-width: 7px;
-  border-style: solid;
   border-image-slice: 1;
-  padding: 53px 70px;
-}
-
-.subscriptions__item:hover a {
-  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
-  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
-  color: #ffffff;
-  border: 0;
-  padding: 26px;
 }
 
 .subscriptions__item h3 {
@@ -1968,7 +1958,7 @@ button,
   line-height: 29px;
   color: #102654;
   margin-top: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .subscriptions__item p {
@@ -1978,7 +1968,7 @@ button,
   line-height: 150%;
   color: #495a7d;
   margin-top: 0;
-  margin-bottom: 66px;
+  margin-bottom: 65px;
 }
 
 .subscriptions__price {
@@ -2044,6 +2034,14 @@ button,
 
 .subscriptions__item a:hover {
   opacity: 0.7;
+}
+
+.subscriptions__item:hover a {
+  background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  color: #ffffff;
+  border: 0;
+  padding-top: 26px;
 }
 
 .subscriptions__tabs .current-tab {
@@ -2115,7 +2113,7 @@ button,
 }
 
 .promo__content dd {
-  margin: -3px 0 10px 0;
+  margin: -1px 0 10px 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 40px;
@@ -2127,7 +2125,19 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-top: 1px solid #ffffff;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.promo__content dd::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  top: 6px;
 }
 
 .promo__content span {
@@ -2368,10 +2378,23 @@ button,
   margin-top: 0;
   margin-bottom: 47px;
   margin-left: 10px;
-  grid-column: 1/-1;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+}
+
+.advantages__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .advantages__list {
@@ -2380,21 +2403,15 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 240px 1fr;
-  grid-template-columns: 1fr 240px 1fr;
-  -webkit-column-gap: 60px;
-  -moz-column-gap: 60px;
-  column-gap: 60px;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 360px;
+  -moz-column-gap: 360px;
+  column-gap: 360px;
   row-gap: 153px;
 }
 
 .advantages__central-block {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
-  grid-row: 1/-1;
   background-color: #1c3374;
   color: #ffffff;
   display: -webkit-box;
@@ -2409,14 +2426,16 @@ button,
   align-items: center;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   padding: 45px 34px 57px;
-  margin-top: 8px;
-  margin-bottom: 5px;
+  position: absolute;
+  top: 8px;
+  width: 240px;
 }
 
 .advantages__central-block span {
   font-weight: 700;
   font-size: 74px;
   line-height: normal;
+  margin-left: -2px;
 }
 
 .advantages__central-block h3 {
@@ -2438,58 +2457,49 @@ button,
 .advantages__item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-  grid-template-columns: auto auto;
+  -ms-grid-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
   -webkit-column-gap: 30px;
   -moz-column-gap: 30px;
   column-gap: 30px;
 }
 
-.advantages__item--square {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+.advantages__item:nth-of-type(2n-1) {
   padding-left: 80px;
 }
 
-.advantages__item--parking {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 1;
-  grid-row: 1/2;
+.advantages__list--top .advantages__item {
+  position: relative;
 }
 
-.advantages__item--comfort {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  padding-left: 80px;
+.advantages__list--top .advantages__item::before {
+  position: absolute;
+  content: "";
+  width: 85%;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+  bottom: -78px;
 }
 
-.advantages__item--coaching-experience {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3/4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2/3;
-  -webkit-column-gap: 32px;
-  -moz-column-gap: 32px;
-  column-gap: 32px;
+.advantages__list--bottom .advantages__item:not(:last-of-type):not(:nth-last-of-type(2)) {
+  position: relative;
 }
 
-.advantages__item div {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2/3;
+.advantages__list--bottom .advantages__item:not(:last-of-type):not(:nth-last-of-type(2))::before {
+  position: absolute;
+  content: "";
+  width: 85%;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+  bottom: -78px;
+}
+
+.advantages__list--top {
+  margin-bottom: 153px;
+}
+
+.advantages__item:nth-of-type(2n-1)::before {
+  right: 0;
 }
 
 .advantages__item h3 {
@@ -3389,21 +3399,21 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 42px;
+    gap: 41px;
   }
 
   .subscriptions__item {
     width: 100%;
     min-width: 442px;
-    padding: 62px 118px 68px;
-  }
-
-  .subscriptions__item:hover {
     padding: 55px 111px 61px;
   }
 
   .subscriptions__item h3 {
     margin-bottom: 8px;
+  }
+
+  .subscriptions__price {
+    margin-bottom: 35px;
   }
 
   .subscriptions__tabs .current-tab {
@@ -3423,7 +3433,7 @@ button,
   }
 
   .promo__content {
-    padding: 51px 45px;
+    padding: 52px 45px;
     -webkit-column-gap: 35px;
     -moz-column-gap: 35px;
     column-gap: 35px;
@@ -3449,8 +3459,12 @@ button,
     width: -moz-fit-content;
     width: fit-content;
     margin-top: 1px;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
     line-height: normal;
+  }
+
+  .promo__content dd::before {
+    top: 0;
   }
 
   .promo__content span {
@@ -3545,21 +3559,18 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto auto auto;
-    grid-template-rows: auto auto auto;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
     row-gap: 44px;
+    width: 100%;
   }
 
   .advantages__central-block {
-    margin: 0 118px;
+    position: static;
     padding: 25px 135px 37px;
-    grid-column: 1/-1;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
+    width: 442px;
+    margin-bottom: 42px;
   }
 
   .advantages__central-block span {
@@ -3576,30 +3587,20 @@ button,
     width: auto;
   }
 
-  .advantages__item--square {
+  .advantages__item:nth-of-type(2n-1) {
     padding: 0;
   }
 
-  .advantages__item--parking {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
+  .advantages__list--top .advantages__item::before {
+    display: none;
   }
 
-  .advantages__item--comfort {
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
-    padding: 0;
+  .advantages__list--bottom .advantages__item:not(:last-of-type):not(:nth-last-of-type(2))::before {
+    display: none;
   }
 
-  .advantages__item--coaching-experience {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
+  .advantages__list--top {
+    margin-bottom: 44px;
   }
 
   .advantages__item h3 {
@@ -3621,6 +3622,7 @@ button,
 
   .discounts {
     padding-top: 92px;
+    padding-bottom: 52px;
   }
 
   .discounts__container {
@@ -3672,7 +3674,6 @@ button,
   .hot-sale__image img {
     min-width: 399px;
     width: 100%;
-    height: auto;
   }
 
   .reviews {
@@ -3913,6 +3914,7 @@ button,
 
   .gym__text p {
     text-align: left;
+    padding-right: 28px;
   }
 
   .gym__picture {
@@ -3945,7 +3947,7 @@ button,
 
   .subscriptions {
     padding-top: 65px;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
   }
 
   .subscriptions::after {
@@ -3972,16 +3974,12 @@ button,
   }
 
   .subscriptions__list {
-    gap: 40px;
+    gap: 38px;
   }
 
   .subscriptions__item {
     min-width: 290px;
-    padding: 50px 42px;
-  }
-
-  .subscriptions__item:hover {
-    padding: 43px 35px;
+    padding: 43px 35px 46px;
   }
 
   .subscriptions__item h3 {
@@ -3999,7 +3997,6 @@ button,
 
   .subscriptions__item span {
     font-size: 48px;
-    margin-left: 7px;
   }
 
   .subscriptions__item span:last-of-type::after {
@@ -4129,8 +4126,7 @@ button,
   .advantages__central-block {
     width: 100%;
     padding: 29px 74px 43px;
-    margin-top: 23px;
-    margin-bottom: 5px;
+    margin-bottom: 27px;
   }
 
   .advantages__central-block h3 {
@@ -4150,6 +4146,14 @@ button,
     -ms-flex-align: center;
     align-items: center;
     padding: 0 35px;
+  }
+
+  .advantages__item:nth-of-type(2n-1) {
+    padding: 0 35px;
+  }
+
+  .advantages__list--top {
+    margin-bottom: 43px;
   }
 
   .advantages__item h3 {
@@ -4231,6 +4235,7 @@ button,
 
   .hot-sale__image img {
     min-width: 290px;
+    height: 300px;
     -o-object-position: top;
     object-position: top;
   }
