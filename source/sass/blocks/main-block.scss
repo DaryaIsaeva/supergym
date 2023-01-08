@@ -159,9 +159,10 @@
 
 .main-block__picture img {
   object-fit: cover;
+  height: 100%;
 
   @include vp-1199 {
     width: 324px;
-    height: 390px;
+    min-height: 390px;
   }
 }

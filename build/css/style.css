@@ -1685,11 +1685,12 @@ button,
 .main-block__picture img {
   -o-object-fit: cover;
   object-fit: cover;
+  height: 100%;
 }
 
 .gym {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 233px;
 }
 
 .gym__container {
@@ -1701,6 +1702,7 @@ button,
   -webkit-column-gap: 85px;
   -moz-column-gap: 85px;
   column-gap: 85px;
+  position: relative;
 }
 
 .gym__text {
@@ -1761,15 +1763,16 @@ button,
 }
 
 .gym__video {
-  grid-column: 1/-1;
-  margin: -115px auto 0 auto;
-  -webkit-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  transform: translateX(10px);
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  -webkit-transform: translate(-39%, -50%);
+  -ms-transform: translate(-39%, -50%);
+  transform: translate(-39%, -50%);
+  top: 402px;
 }
 
 .video {
-  position: relative;
   width: 364px;
   height: 228px;
   display: -webkit-box;
@@ -1976,6 +1979,7 @@ button,
   color: #495a7d;
   margin-top: 0;
   margin-bottom: 65px;
+  text-align: center;
 }
 
 .subscriptions__price {
@@ -2687,6 +2691,7 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-top: 30px;
 }
 
 .hot-sale__text a:hover {
@@ -2695,7 +2700,8 @@ button,
 
 .hot-sale__image img {
   width: 280px;
-  height: 462px;
+  min-height: 462px;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -2888,6 +2894,7 @@ button,
   border: 0;
   border-bottom: 1px solid #74819c;
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  color: #ffffff;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -3089,17 +3096,18 @@ button,
 }
 
 .footer__nav-list {
-  -ms-grid-columns: auto auto auto auto auto auto;
-  grid-template-columns: auto auto auto auto auto auto;
+  -ms-grid-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
   row-gap: 20px;
+  margin-left: 278px;
   margin-right: auto;
 }
 
-.footer__nav-item--logo {
-  margin-right: 238px;
+.footer__nav-item {
+  margin-bottom: 16px;
 }
 
 .footer__nav-item a {
@@ -3236,7 +3244,7 @@ button,
 
   .main-block__picture img {
     width: 324px;
-    height: 390px;
+    min-height: 390px;
   }
 
   .gym {
@@ -3297,10 +3305,14 @@ button,
   }
 
   .gym__video {
+    position: relative;
     margin-top: -83px;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
+    left: 0;
+    right: 0;
+    top: 0;
   }
 
   .video {
@@ -3743,18 +3755,18 @@ button,
   }
 
   .footer {
-    padding: 43px 0;
+    padding: 45px 0;
   }
 
   .footer__nav-list {
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
+    margin-left: 62px;
   }
 
-  .footer__nav-item--logo {
-    margin-right: 32px;
-    margin-top: 3px;
+  .footer__logo {
+    margin-top: 2px;
   }
 
   .footer__logo img {
@@ -4156,8 +4168,13 @@ button,
     margin-bottom: 30px;
   }
 
+  .hot-sale__text a {
+    margin-top: 0;
+  }
+
   .hot-sale__image img {
     min-width: 290px;
+    min-height: auto;
     height: 300px;
     -o-object-position: top;
     object-position: top;
@@ -4291,7 +4308,7 @@ button,
   }
 
   .footer {
-    padding: 45px 0 47px;
+    padding: 47px 0;
   }
 
   .footer__container {
@@ -4299,58 +4316,34 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    position: relative;
   }
 
   .footer__nav-list {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 60px;
-    -moz-column-gap: 60px;
-    column-gap: 60px;
-    row-gap: 16px;
-    margin-bottom: 33px;
+    display: block;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 76px;
+    -moz-column-gap: 76px;
+    column-gap: 76px;
+    margin-left: 0;
+    margin-bottom: 17px;
   }
 
-  .footer__nav-item--logo {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-    margin-top: 5px;
-  }
-
-  .footer__nav-item--discounts {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-  }
-
-  .footer__nav-item--services {
-    -webkit-box-ordinal-group: 4;
-    -ms-flex-order: 3;
-    order: 3;
-  }
-
-  .footer__nav-item--coaches {
-    -webkit-box-ordinal-group: 5;
-    -ms-flex-order: 4;
-    order: 4;
-  }
-
-  .footer__nav-item--subscriptions {
-    -webkit-box-ordinal-group: 6;
-    -ms-flex-order: 5;
-    order: 5;
-  }
-
-  .footer__nav-item--schedule {
-    -webkit-box-ordinal-group: 7;
-    -ms-flex-order: 6;
-    order: 6;
+  .footer__nav-item:first-of-type {
+    margin-top: 40px;
   }
 
   .footer__nav-item a {
     font-size: 16px;
     line-height: 19px;
+  }
+
+  .footer__logo {
+    position: absolute;
+    margin-top: 0;
+    top: 5px;
   }
 
   .footer__logo img {

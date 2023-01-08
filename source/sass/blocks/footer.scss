@@ -3,11 +3,11 @@
   padding: 41px 0;
 
   @include vp-1199 {
-    padding: 43px 0;
+    padding: 45px 0;
   }
 
   @include vp-767 {
-    padding: 45px 0 47px;
+    padding: 47px 0;
   }
 }
 
@@ -16,6 +16,7 @@
 
   @include vp-767 {
     flex-direction: column;
+    position: relative;
   }
 }
 
@@ -28,65 +29,34 @@
 }
 
 .footer__nav-list {
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
   column-gap: 40px;
   row-gap: 20px;
+  margin-left: 278px;
   margin-right: auto;
 
   @include vp-1199 {
     column-gap: 30px;
+    margin-left: 62px;
   }
 
   @include vp-767 {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 16px;
-    margin-bottom: 33px;
+    display: block;
+    column-count: 2;
+    column-gap: 76px;
+    margin-left: 0;
+    margin-bottom: 17px;
   }
 }
 
-.footer__nav-item--logo {
-  margin-right: 238px;
-
-  @include vp-1199 {
-    margin-right: 32px;
-    margin-top: 3px;
-  }
-
+.footer__nav-item:first-of-type {
   @include vp-767 {
-    order: 1;
-    margin-top: 5px;
+    margin-top: 40px;
   }
 }
 
-.footer__nav-item--discounts {
-  @include vp-767 {
-    order: 2;
-  }
-}
-
-.footer__nav-item--services {
-  @include vp-767 {
-    order: 3;
-  }
-}
-
-.footer__nav-item--coaches {
-  @include vp-767 {
-    order: 4;
-  }
-}
-
-.footer__nav-item--subscriptions {
-  @include vp-767 {
-    order: 5;
-  }
-}
-
-.footer__nav-item--schedule {
-  @include vp-767 {
-    order: 6;
-  }
+.footer__nav-item {
+  margin-bottom: 16px;
 }
 
 .footer__nav-item a {
@@ -104,6 +74,18 @@
 
   &:hover {
     opacity: 0.7;
+  }
+}
+
+.footer__logo {
+  @include vp-1199 {
+    margin-top: 2px;
+  }
+
+  @include vp-767 {
+    position: absolute;
+    margin-top: 0;
+    top: 5px;
   }
 }
 

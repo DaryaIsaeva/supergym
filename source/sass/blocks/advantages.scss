@@ -59,7 +59,6 @@
   @include vp-1199 {
     grid-template-columns: repeat(2, 1fr);
     gap: 27px;
-    // padding-top: 27px;
   }
 
   @include vp-767 {
