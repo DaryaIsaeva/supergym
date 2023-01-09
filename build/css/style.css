@@ -3177,6 +3177,13 @@ button,
   }
 */
 
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .subscriptions::after {
+    background-size: cover;
+    background-image: url("../img/weights-desktop@2x.png");
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
@@ -3776,7 +3783,7 @@ button,
   }
 }
 
-@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 1.5dppx) {
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1199px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1199px) and (min-resolution: 144dpi), (max-width: 1199px) and (min-resolution: 1.5dppx) {
   .subscriptions::after {
     background-size: cover;
     background-image: url("../img/weights-tablet@2x.png");
@@ -4355,12 +4362,5 @@ button,
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
-  .subscriptions::after {
-    background-size: cover;
-    background-image: url("../img/weights-desktop@2x.png");
   }
 }

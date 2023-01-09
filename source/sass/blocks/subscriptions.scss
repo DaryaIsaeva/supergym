@@ -25,9 +25,11 @@
   bottom: -70px;
   right: 0;
 
-  @media (min-resolution: $retina-dppx) {
-    background-size: cover;
-    background-image: url("../img/weights-desktop@2x.png");
+  @media (min-width: $vp-1200) {
+    @include retina {
+      background-size: cover;
+      background-image: url("../img/weights-desktop@2x.png");
+    }
   }
 
   @include vp-1199 {
@@ -35,7 +37,7 @@
     bottom: -95px;
     width: 347px;
 
-    @media (min-resolution: $retina-dppx) {
+    @include retina {
       background-size: cover;
       background-image: url("../img/weights-tablet@2x.png");
     }
