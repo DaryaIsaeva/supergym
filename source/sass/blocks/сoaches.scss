@@ -50,6 +50,12 @@
   }
 }
 
+.coaches__swiper {
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
 .coaches__list {
   display: flex;
   padding: 0;
@@ -76,8 +82,11 @@
 
 .coaches__photo {
   position: relative;
-  display: flex;
-  justify-content: center;
+
+  @include vp-1199 {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .coaches__photo h3 {
@@ -90,24 +99,39 @@
   z-index: 1;
   bottom: 22px;
   margin: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0 10px;
 
   @include vp-1199 {
-    bottom: 21px;
-    margin-left: 7px;
+    bottom: 23px;
+    margin-left: 3px;
   }
 }
 
 .coaches__photo img {
-  height: 294px;
+  height: auto;
   object-fit: cover;
 
   @include vp-1199 {
-    width: 268px;
+    min-width: 268px;
+    min-height: 294px;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (width: 768px) {
+    height: 294px;
   }
 
   @include vp-767 {
-    width: 226px;
+    min-height: 274px;
+  }
+
+  @media (max-width: 320px) {
     height: 274px;
+    width: 226px;
+    min-width: auto;
   }
 }
 
@@ -126,25 +150,34 @@
   display: none;
 
   @include vp-1199 {
-    padding-top: 53px;
+    padding-top: 50px;
     padding-left: 25px;
-    width: 268px;
+    width: 100%;
+    height: 100%;
   }
 
   @include vp-767 {
     padding-top: 42px;
     padding-left: 30px;
-    width: 226px;
   }
 }
 
 .coaches__info h3 {
+  font-family: $ff-roboto-condensed;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
   margin: 0;
-  margin-left: -12px;
+  margin-left: -35px;
 
   @include vp-1199 {
     font-size: 18px;
     line-height: 150%;
+    margin-left: -15px;
+  }
+
+  @include vp-767 {
+    margin-left: -11px;
   }
 }
 
@@ -154,17 +187,19 @@
   font-size: 16px;
   line-height: 150%;
   color: #b6bdcc;
-  margin-bottom: 30px;
   text-align: center;
-  margin-left: -12px;
+  margin-left: -35px;
+  margin-top: -5px;
+  margin-bottom: 34px;
 
   @include vp-1199 {
-    margin-top: -5px;
-    margin-bottom: 33px;
+    margin-bottom: 35px;
+    margin-left: -15px;
   }
 
   @include vp-767 {
     margin-bottom: 34px;
+    margin-left: -11px;
   }
 }
 
@@ -187,14 +222,16 @@
 }
 
 .coaches__info li:not(:last-of-type) {
-  margin-bottom: 14px;
+  margin-bottom: 13px;
 }
 
-.coaches__item:hover .coaches__info {
+.coaches__item:hover .coaches__info,
+.coaches__item:focus-visible .coaches__info {
   display: flex;
 }
 
-.coaches__item:hover .coaches__photo > h3 {
+.coaches__item:hover .coaches__photo > h3,
+.coaches__item:focus-visible .coaches__photo > h3 {
   display: none;
 }
 
@@ -216,7 +253,7 @@
   box-sizing: content-box;
 
   @include vp-1199 {
-    margin-top: 15px;
+    margin-top: 13px;
   }
 
   @include vp-767 {

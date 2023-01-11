@@ -3,6 +3,7 @@ import {onPlayClick} from './modules/video';
 import {onTabButtonClick} from './modules/tabs';
 import {initCoachesSlider} from './modules/coaches-slider';
 import {initReviewsSlider} from './modules/reviews-slider';
+import {addMaskPhone} from './modules/mask-phone';
 
 
 // ---------------------------------
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   onTabButtonClick();
   initCoachesSlider();
   initReviewsSlider();
+  addMaskPhone();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
