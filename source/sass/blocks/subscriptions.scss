@@ -116,7 +116,7 @@
     column-gap: 36px;
     margin-bottom: 46px;
     grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-    width: 75%;
+    max-width: 75%;
   }
 
   @include vp-767 {

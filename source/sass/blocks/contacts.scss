@@ -248,6 +248,8 @@
 
 .contacts__item {
   font-family: $ff-roboto-condensed;
+  display: flex;
+  flex-direction: column;
 }
 
 .contacts__item--address {
@@ -296,10 +298,12 @@
   line-height: 21px;
   color: $color-sapphire;
   word-break: break-word;
+  max-width: 170px;
 
   @include vp-1199 {
     font-size: 18px;
     line-height: 152.34%;
+    max-width: 220px;
   }
 }
 

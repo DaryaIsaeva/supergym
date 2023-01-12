@@ -3051,6 +3051,13 @@ button,
 
 .contacts__item {
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .contacts__item--address {
@@ -3094,6 +3101,7 @@ button,
   line-height: 21px;
   color: #102654;
   word-break: break-word;
+  max-width: 170px;
 }
 
 .contacts__item a:hover {
@@ -3410,7 +3418,7 @@ button,
     column-gap: 36px;
     margin-bottom: 46px;
     grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-    width: 75%;
+    max-width: 75%;
   }
 
   .subscriptions__buttons button {
@@ -3830,6 +3838,7 @@ button,
   .contacts__item a {
     font-size: 18px;
     line-height: 152.34%;
+    max-width: 220px;
   }
 
   .footer {

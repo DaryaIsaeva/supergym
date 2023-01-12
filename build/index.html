@@ -497,7 +497,7 @@
                 <label class="visually-hidden" for="name">Введите ваше имя</label>
                 <input type="text" id="name" name="name" placeholder="Имя" minlength="1" required>
                 <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-                <input type="tel" id="phone" name="phone" placeholder="Телефон" required data-mask="phone">
+                <input type="tel" id="phone" name="phone" placeholder="Телефон" required data-mask="phone" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}">
                 <button type="submit">отправить</button>
               </div>
             </form>
