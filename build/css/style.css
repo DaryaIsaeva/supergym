@@ -1546,16 +1546,13 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: 30%;
-  -webkit-column-gap: 30px;
-  -moz-column-gap: 30px;
-  column-gap: 30px;
-  row-gap: 10px;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20%;
+  text-align: right;
 }
 
 .header__phone {
@@ -1893,15 +1890,15 @@ button,
 }
 
 .subscriptions__buttons {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
   -webkit-column-gap: 27px;
   -moz-column-gap: 27px;
   column-gap: 27px;
   margin-bottom: 39px;
   position: relative;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(92px, 1fr));
+  max-width: 100%;
 }
 
 .subscriptions__buttons::before {
@@ -1927,9 +1924,9 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .subscriptions__buttons button:hover {
@@ -1937,7 +1934,7 @@ button,
   border-bottom: 2px solid #d10a42;
 }
 
-.subscriptions__buttons button:nth-of-type(3n-1) {
+.subscriptions__buttons button:nth-of-type(2) {
   margin-left: -10px;
 }
 
@@ -2838,13 +2835,12 @@ button,
   width: 16px;
   height: 32px;
   position: absolute;
-  top: 50%;
+  top: 195px;
   cursor: pointer;
   padding: 10px;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   background-position: center;
-  margin-top: 25px;
 }
 
 .reviews__button-prev:hover,
@@ -3097,6 +3093,7 @@ button,
   font-size: 14px;
   line-height: 21px;
   color: #102654;
+  word-break: break-word;
 }
 
 .contacts__item a:hover {
@@ -3408,14 +3405,20 @@ button,
   }
 
   .subscriptions__buttons {
-    -webkit-column-gap: 38px;
-    -moz-column-gap: 38px;
-    column-gap: 38px;
+    -webkit-column-gap: 36px;
+    -moz-column-gap: 36px;
+    column-gap: 36px;
     margin-bottom: 46px;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    width: 75%;
   }
 
   .subscriptions__buttons button {
     font-size: 18px;
+  }
+
+  .subscriptions__buttons button:nth-of-type(2) {
+    margin-left: 0;
   }
 
   .subscriptions__list {
@@ -3733,7 +3736,7 @@ button,
 
   .reviews__button-prev,
   .reviews__button-next {
-    margin-top: 18px;
+    top: 185px;
   }
 
   .reviews__button-next {
@@ -3877,17 +3880,6 @@ button,
     height: 24px;
   }
 
-  .header__contacts {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-left: 30px;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: flex-end;
-  }
-
   .header__phone {
     font-size: 20px;
     line-height: 24px;
@@ -4013,7 +4005,7 @@ button,
     -moz-column-gap: 28px;
     column-gap: 28px;
     margin-bottom: 35px;
-    width: 290px;
+    width: 100%;
   }
 
   .subscriptions__buttons button {
@@ -4023,10 +4015,6 @@ button,
 
   .subscriptions__buttons button:hover {
     padding-bottom: 12px;
-  }
-
-  .subscriptions__buttons button:nth-of-type(3n-1) {
-    margin-left: -8px;
   }
 
   .subscriptions__buttons .active-button {
@@ -4352,19 +4340,20 @@ button,
   .reviews__button-prev,
   .reviews__button-next {
     background-size: 10px 19px;
+    top: 222px;
   }
 
   .reviews__button-prev {
-    -webkit-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px);
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
     left: 2px;
   }
 
   .reviews__button-next {
-    -webkit-transform: rotate(180deg) translateY(5px);
-    -ms-transform: rotate(180deg) translateY(5px);
-    transform: rotate(180deg) translateY(5px);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
     right: 2px;
   }
 
@@ -4493,6 +4482,12 @@ button,
   }
 }
 
+@media (max-width: 767px) and (max-width: 320px) {
+  .subscriptions__buttons button:nth-of-type(3n-1) {
+    margin-left: -8px;
+  }
+}
+
 @media (max-width: 320px) {
   .video__preview img {
     height: 167px;
@@ -4509,7 +4504,17 @@ button,
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1330px) {
+  .header__contacts {
+    margin-bottom: 30px;
+  }
+}
+
 @media (width: 768px) {
+  .subscriptions__buttons button:nth-of-type(3n-1) {
+    margin-left: -9px;
+  }
+
   .coaches__photo img {
     height: 294px;
   }

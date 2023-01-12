@@ -295,6 +295,7 @@
   font-size: 14px;
   line-height: 21px;
   color: $color-sapphire;
+  word-break: break-word;
 
   @include vp-1199 {
     font-size: 18px;

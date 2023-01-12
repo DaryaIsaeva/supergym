@@ -161,19 +161,19 @@
   width: 16px;
   height: 32px;
   position: absolute;
-  top: 50%;
+  top: 195px;
   cursor: pointer;
   padding: 10px;
   box-sizing: content-box;
   background-position: center;
-  margin-top: 25px;
 
   @include vp-1199 {
-    margin-top: 18px;
+    top: 185px;
   }
 
   @include vp-767 {
     background-size: 10px 19px;
+    top: 222px;
   }
 
   &:hover {
@@ -189,7 +189,7 @@
   transform: translateX(-66px);
 
   @include vp-767 {
-    transform: translateY(-5px);
+    transform: none;
     left: 2px;
   }
 }
@@ -202,7 +202,7 @@
   }
 
   @include vp-767 {
-    transform: rotate(180deg) translateY(5px);
+    transform: rotate(180deg);
     right: 2px;
   }
 }
