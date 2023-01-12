@@ -4014,7 +4014,7 @@ button,
     -moz-column-gap: 28px;
     column-gap: 28px;
     margin-bottom: 35px;
-    width: 100%;
+    max-width: 100%;
   }
 
   .subscriptions__buttons button {
